@@ -1,0 +1,6 @@
+%li.note{:id => dom_id(item)}
+  = item.note
+  = link_to item_url(item), method: 'delete', class: 'trash_icon' do
+    %i.icon-trash
+    
+  

@@ -1,0 +1,40 @@
+// Place all the styles related to the retros controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.stat {
+  vertical-align: middle;
+}
+
+#retrobox {
+
+  .statcount {
+    float: right;
+    font-size: 18px;
+  }
+  .notes {
+    padding: 12px;
+  }
+
+  .trash_icon {
+    float: right;
+    color: black;
+  }
+  
+  input {
+    width: 90%;
+    font-size: 16px;
+  }
+  li.note {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    border-top: dotted 1px #6A8EC5;
+    clear: both;
+  }
+  h1 {
+    border-top: 4px solid #999;
+    margin-bottom: 12px;
+    padding-top: 4px;
+  }
+}

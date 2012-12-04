@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  class: MyString
+  section: MyString
+  week_numbre: MyString
+  captured_on: 2012-07-04
+
+two:
+  class: MyString
+  section: MyString
+  week_numbre: MyString
+  captured_on: 2012-07-04

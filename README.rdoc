@@ -1,0 +1,5 @@
+== Welcome to Retros
+
+The best way for agile organizations to capture their retrospectives in the cloud.
+
+"They say hindsight is 20/20."

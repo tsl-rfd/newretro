@@ -1,0 +1,14 @@
+.notes
+  %h1
+    = category.name.upcase
+    = render 'stat_info', :category => category, :item_count => @retro.items.for_category(category).count
+
+    = form_for @retro.items.for_category(category).new do |f|
+      = f.text_field :note, :id => "note_for_#{category.name.downcase}"
+      = f.hidden_field :category_id
+      = f.hidden_field :retro_id
+    
+  %ul.unstyled(id="#{dom_id(category)}")
+    - @retro.items.for_category(category).each do |item|
+      = render 'items/item', :item => item
+      

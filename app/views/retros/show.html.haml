@@ -1,0 +1,27 @@
+.page-header 
+  %h1
+    %small Retrospective No. #{@retro.id}
+
+.row
+  .span12
+    = form_for @retro, remote: true, html: { class: 'well form-inline' } do |f|
+      = f.label :captured_on
+      = f.text_field :captured_on, :class => 'input-small'
+
+      = f.submit "Save", :class => 'btn-info btn'
+
+      %p.pull-right
+        = link_to "Delete This Retrospective", @retro, method: 'delete', confirm: 'Are you sure?  There is no going back!', class: 'btn btn-danger'
+        = link_to "I'm Done", retros_url, class: 'btn btn-success'
+
+.row
+  .span12#page_notice
+
+    
+#retrobox
+
+  .row.top_side
+    .span6.left_side
+      = render 'quadrant', :category => Category.aha
+    .span6.right_side
+      = render 'quadrant', :category => Category.fuzzy

@@ -1,0 +1,27 @@
+.page-header 
+  %h1 All Retrospectives
+  
+.row
+  .span6
+    %p
+      = link_to "Capture a New Retro", @retro, method: 'post', class: 'btn btn-success'
+  
+  
+    %table.table.table-striped
+      %thead
+        %th Capture Date
+        %th Stats
+      %tbody
+        - Retro.order('captured_on desc').limit(100).each do |retro|
+          %tr
+            - stats = retro.stats
+            %td
+              = link_to retro_url(retro) do
+                View
+                = retro.captured_on.to_formatted_s(:long)
+            %td
+              %span.label.label-success.stat= stats.first
+              %span.label.label-important.stat= stats.second
+
+
+  

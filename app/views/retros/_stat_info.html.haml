@@ -1,0 +1,3 @@
+- labels = { :aha => :success, :fuzzy => :important}
+
+%span.statcount.label(id="stat_#{dom_id(category)}" class="label-#{labels[category.name.downcase.to_sym]}")= item_count
